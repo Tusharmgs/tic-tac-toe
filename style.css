@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background-color: #0f0f0f;
+  text-align: center;
+  height: 100vh;
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+}
+
+.main {
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #f4ff8f, #00ffae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.tableContainer {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(90vw, 300px);
+  aspect-ratio: 1 / 1;
+}
+
+.table div {
+  border: 1px solid #fff;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  aspect-ratio: 1 / 1; /* ensures squares remain perfect */
+  width: 100%; /* each takes full grid column width */
+  height: auto;
+  line-height: 1; /* prevent text from pushing cell height */
+}
+
+.table div:first-child {
+  border-top-left-radius: 5px;
+}
+.table div:nth-child(3) {
+  border-top-right-radius: 5px;
+}
+.table div:nth-child(7) {
+  border-bottom-left-radius: 5px;
+}
+.table div:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.activePlayerBar {
+  border-radius: 3px;
+  width: min(90vw, 305px);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #a2d5c6;
+}
+
+.player {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  border-radius: 2px;
+  background-color: #00ffae;
+  color: #000000;
+  box-shadow: 0 0 10px #00ffae88;
+  transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.winningMessage {
+  height: 30px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #f4ff8f;
+  font-weight: 600;
+  animation: pop 0.5s ease;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none !important;
+}
+
+.homePage {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+form {
+  width: 90%;
+  max-width: 360px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+form input {
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.playAgain button {
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+.reset button {
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  background: linear-gradient(90deg, #f4ff8f, #00ffae);
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+.reset button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00ffae;
+}
+form button,
+.playAgain button {
+  background: linear-gradient(90deg, #f4ff8f, #00ffae);
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.playAgain button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00ffae;
+}
+form button:hover{
+    box-shadow: 0 0 8px #00ffae;
+    transform: scale(1.02);
+}
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: min(90vw, 305px);
+  margin: 10px 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #a2d5c6;
+  font-weight: 600;
+  text-shadow: 0 0 2px #000;
+}
+.scoreboard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0 0 6px #00ffae33;
+}
+
+/* Smaller screen adjustments */
+@media (max-width: 500px) {
+  .main {
+    padding: 10px;
+  }
+
+  .table {
+    width: 85vw;
+  }
+
+  .table div {
+    font-size: 1.5rem;
+  }
+
+  .activePlayerBar {
+    width: 85vw;
+  }
+
+  form {
+    width: 95%;
+  }
+}
