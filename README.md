@@ -1,19 +1,41 @@
-
-````{"variant":"standard","title":"README for Tic Tac Toe Game","id":"59201"}
 # 🎮 Tic Tac Toe — A Classic Game Reimagined
 
-A modern, responsive, and interactive version of the classic **Tic Tac Toe** game — built using **HTML**, **CSS**, and **JavaScript** only.
+A modern, responsive, and interactive version of the classic **Tic Tac Toe** game — built purely with **HTML**, **CSS**, and **JavaScript**.
 
 ---
 
-## ✨ Features
+## 🏁 Overview
 
-✅ **Two-player gameplay** — play locally with friends  
-✅ **Responsive design** — fully optimized for mobile & desktop  
-✅ **Dynamic scoreboard** — tracks each player’s total wins  
-✅ **Smooth transitions** — with animation and subtle UI effects  
-✅ **Restart & Reset options** — continue rounds or start fresh  
-✅ **No frameworks** — built purely with vanilla web tech
+This project is a browser-based implementation of the timeless **Tic Tac Toe** game.  
+It combines **clean UI design**, **fluid responsiveness**, and **engaging game logic** — all without using any frameworks.
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Play the Game Here:** [Live Demo](https://tic-tac-toe-product.netlify.app/)  
+
+## 📸 Preview
+
+![Tic Tac Toe Preview](assets/preview.png)
+---
+
+## ✨ Key Features
+
+### 🎯 Gameplay
+- Two-player mode for **local multiplayer**  
+- Real-time **turn indication** and **active player highlighting**  
+- **Dynamic scoreboard** that tracks total wins  
+
+### 🎨 Design & UI
+- Responsive layout built with **CSS Grid** and **Flexbox**  
+- Minimal **dark theme** with glowing accents  
+- Smooth **animated transitions** for moves and results  
+
+### ⚙️ Functionality
+- **Reset** → starts a new round (keeps the score)  
+- **Restart** → fresh game (resets players and scores)  
+- **Tie and win detection** with smooth timing delays  
 
 ---
 
@@ -21,15 +43,9 @@ A modern, responsive, and interactive version of the classic **Tic Tac Toe** gam
 
 | Technology | Purpose |
 |-------------|----------|
-| **HTML5** | Structure & layout |
-| **CSS3 (Flexbox + Grid)** | Styling & responsiveness |
-| **JavaScript (ES6)** | Game logic & interactivity |
-
----
-
-## 🚀 Live Demo
-
-👉 [**Play the Game Here**](#)  
+| **HTML5** | Game structure and layout |
+| **CSS3** | Styling, responsiveness, and animations |
+| **JavaScript (ES6)** | Game logic, DOM manipulation, and interactivity |
 
 ---
 
@@ -37,20 +53,23 @@ A modern, responsive, and interactive version of the classic **Tic Tac Toe** gam
 
 1. Enter both player names on the home screen.  
 2. Click **Start Game**.  
-3. Take turns placing X and O on the grid.  
-4. First to align 3 marks (vertically, horizontally, or diagonally) wins!  
-5. Use **Reset** to play again or **Restart** to start over completely.
+3. Players take turns marking cells with `X` or `O`.  
+4. The first player to align **three marks** (row, column, or diagonal) wins.  
+5. Click **Reset** to play another round, or **Restart** to start over completely.  
 
 ---
 
-## 🧠 Game Logic Highlights
+## 🧠 Game Logic Overview
 
-- The game board is stored as a **9-element array**.  
-- Winning combinations are checked after each move.  
-- Player switching handled by a **toggle-based state system**.  
-- The scoreboard dynamically updates after each win.
+The game logic is **modular, optimized, and efficient**, powered by simple data structures and clear control flow.
 
-Example snippet:
+- The board is represented by a **9-element array**.  
+- Move validation ensures **no overwriting** of cells.  
+- Win detection checks **all possible line combinations**.  
+- Player switching handled by **toggle states** after every valid move.  
+
+**Win pattern combinations:**
+
 ```js
 const lines = [
   [0, 1, 2],
@@ -63,65 +82,51 @@ const lines = [
   [2, 4, 6],
 ];
 ```
-
----
-
 ## 💅 Visual Theme
+### 🎨 Color Palette
 
-- Background: `#2a2a2a` (dark minimal base)  
-- Primary accent: `#00ffae` (vibrant mint green)  
-- Highlight: `#f4ff8f` (soft yellow)  
-- Font: *Bitcount Grid Single* + *Ubuntu*  
-
----
-
-## 📸 Preview
-
-*(You can drag screenshots into your README here)*  
-![Tic Tac Toe Demo](assets/preview.png)
+| Element | Color | Description |
+|----------|--------|-------------|
+| **Background** | `#2a2a2a` | Dark minimal base |
+| **Primary Accent** | `#00ffae` | Vibrant mint green |
+| **Highlight** | `#f4ff8f` | Soft yellow |
 
 ---
 
-## ⚡ Setup & Run Locally
+### 🖋️ Typography
 
-```bash
-# Clone the repository
+- **Bitcount Grid Single** — used for the game title  
+- **Ubuntu** — for readability and modern feel  
+
+---
+
+## 1. Clone the repository
 git clone https://github.com/Tusharmgs/tic-tac-toe.git
 
-# Go into the project folder
+## 2. Go into the project folder
 cd tic-tac-toe
 
-# Open with Live Server (VS Code extension)
-```
-
-Or simply double-click `index.html` to open in your browser.
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] Add **Single Player (AI mode)** 🤖  
-- [ ] Add **Dark / Light Mode Toggle** 🌗  
-- [ ] Add **Confetti Animation** for winners 🎉  
-- [ ] Add **Sound Effects** for moves 🔊  
-
----
+## 3. Open the project with Live Server (VS Code extension)
 
 ## 🧑‍💻 Author
 
-**Tushar Keshari**  
-🎓 BCA, Microtek Collage of Management and Technology  
-💡 Passionate about front-end development and interactive design  
-📬 [LinkedIn](https://www.linkedin.com/in/hritik-keshari/) • [GitHub](https://github.com/<your-username>)
+**😊 Tushar Keshari**  
+🎓 *BCA, Microtek College of Management and Technology*  
+💡 Passionate about **front-end development** and **interactive web design**
 
 ---
 
-## ⭐ Show Some Love!
+## 📬 Connect with Me
 
-If you like this project:
-- ⭐ **Star** this repo on GitHub  
-- 🪄 **Fork** it to build your own version  
-- 💬 Drop feedback — suggestions are welcome!
-````
+- 🔗 [**LinkedIn**](https://www.linkedin.com/in/tushar-keshar-mgs)  
+- 💻 [**GitHub**](https://github.com/Tusharmgs)
 
+---
 
+## ⭐ Support
+
+If you enjoyed this project, consider supporting it:
+
+⭐ **Star** this repository  
+🍴 **Fork** it to create your version  
+💬 **Share feedback or ideas** — contributions are always welcome!
